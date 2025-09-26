@@ -55,27 +55,3 @@ Hatter; PHP (procedural) + MySQL ile geliştirilmiş, ürün listeleme, sepet, s
 - Blog ve Yorum Yönetimi: `AdminPanel/UserContentControl/`
 
 Not: Yetkilendirme/kimlik doğrulama akışı proje yapınıza göre özelleştirilebilir. Varsayılan bir admin kullanıcısı sağlanmadıysa veritabanına manuel ekleyin.
-
-### Güvenlik Notları
-- Dosya yüklemelerinde MIME türü ve uzantı doğrulaması yapın, maksimum dosya boyutu kısıtlayın.
-- Form girdileri için CSRF ve XSS korumaları ekleyin (ör. token, output escaping).
-- SQL enjeksiyonuna karşı prepared statements kullanın (mevcut kodları gözden geçirmeniz önerilir).
-- Admin paneline ek erişim kontrolleri ve parola karma (password hashing) uygulayın.
-
-### Geliştirme İpuçları
-- PHP hatalarını görmek için geliştirme ortamında `display_errors=On` ve `error_reporting(E_ALL)` ayarlayabilirsiniz (üretimde kapatın).
-- Ortak şablonlar: `root/header.php`, `root/footer.php` ve yönetim paneli için `AdminPanel/adminroot/` altındaki dosyalar.
-- Statik içerik ve resimler için `images/` ve `uploads/` klasörlerini kullanın.
-
-### Yol Haritası (Öneri)
-- Formlar için CSRF koruması
-- Tüm SQL işlemlerinin prepared statements’a taşınması
-- Gelişmiş arama, filtreleme ve sayfalama
-- Çoklu dil desteği
-- Test verisi ve örnek SQL şeması eklenmesi
-
-### Lisans
-Bu proje için belirli bir lisans belirtilmemiştir. Kullanım koşullarını proje sahibine danışın.
-
-### İletişim
-Sorular ve katkılar için lütfen proje sahibi ile iletişime geçin veya bir konu (issue) açın.
